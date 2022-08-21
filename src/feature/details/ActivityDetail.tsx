@@ -4,9 +4,10 @@ import { Activity } from '../../app/models/activity'
 
 type Props = {
   activity: Activity
+  cancelSelectActivity: () => void
 }
 
-const ActivityDetail = ({activity}: Props) => {
+const ActivityDetail = ({activity, cancelSelectActivity}: Props) => {
   const imagePath = `/assets/categoryImages/${activity.category}.jpg`
   return (
     <Card fluid>
