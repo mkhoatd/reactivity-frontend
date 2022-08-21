@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import axios from "axios";
-import { Activity } from "../models/activity";
-import { Container } from "semantic-ui-react";
+import {Activity} from "../models/activity";
+import {Container} from "semantic-ui-react";
 import NavBar from "./NavBar";
 import ActivityDashboard from "../../feature/dashboard/ActivityDashboard";
 
@@ -33,15 +33,22 @@ function App() {
     setEditMode(true);
   }
 
+  function handleFromClose() {
+    setEditMode(false);
+  }
+
   return (
     <>
-      <NavBar />
-      <Container style={{ marginTop: "7em" }}>
+      <NavBar openForm={handleFormOpen}/>
+      <Container style={{marginTop: "7em"}}>
         <ActivityDashboard
           activities={activities}
           selectedActivity={selectedActivity}
           selectActivity={handleSelectActivity}
           cancelSelectActivity={handleCancelSelectedActivity}
+          editMode={editMode}
+          openForm={handleFormOpen}
+          closeForm={handleFromClose}
         />
       </Container>
     </>
