@@ -40,7 +40,8 @@ const ActivityFrom = ({activity: selectedActivity, closeForm, createOrEdit, subm
         <Form.Input placeholder="Description" value={activity.description} name={'description'}
                     onChange={handleInputChange}/>
         <Form.Input placeholder="Category" value={activity.category} name={'category'} onChange={handleInputChange}/>
-        <Form.Input type={'datetime'} placeholder="Date" value={activity.date} name={'date'} onChange={handleInputChange}/>
+        <Form.Input type={'datetime'} placeholder="Date" value={activity.date} name={'date'}
+                    onChange={handleInputChange}/>
         <Form.Input placeholder="City" value={activity.city} name={'city'} onChange={handleInputChange}/>
         <Form.Input placeholder="Venue" value={activity.venue} name={'venue'} onChange={handleInputChange}/>
         <Button loading={submitting} floated="right" positive type="submit" content="Submit"/>

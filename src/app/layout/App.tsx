@@ -44,13 +44,13 @@ function App() {
     setSubmitting(true);
     if (activity.id) {
       agent.Activities.update(activity).then(() => {
-        setActivities([...activities.filter(x=>x.id!==activity.id), activity]);
+        setActivities([...activities.filter(x => x.id !== activity.id), activity]);
         setSelectedActivity(activity);
         setEditMode(false);
         setSubmitting(false);
       })
     } else {
-      activity.id=uuid();
+      activity.id = uuid();
       agent.Activities.create(activity).then(() => {
         setActivities([...activities, activity]);
         setSelectedActivity(activity);
@@ -64,11 +64,12 @@ function App() {
 
   function handleDeleteActivity(id: string) {
     setSubmitting(true);
-    agent.Activities.delete(id).then(()=>{
-      setActivities([...activities.filter(x=>x.id!==id)]);
+    agent.Activities.delete(id).then(() => {
+      setActivities([...activities.filter(x => x.id !== id)]);
       setSubmitting(false);
     })
   }
+
   if (loading) return <LoadingComponent content={"Loading app"}/>
   return (
     <>
