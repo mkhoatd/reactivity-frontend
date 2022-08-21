@@ -13,7 +13,7 @@ const NavBar = ({openForm}: Props) => {
           <img src="/assets/logo.png" alt="logo" style={{marginRight: '10px'}}/>
           Reactivities
         </Menu.Item>
-        <Menu.Item name="Activites" />
+        <Menu.Item name="Activities" />
         <Menu.Item>
           <Button onClick={openForm} positive content="Create Activity" />
         </Menu.Item>

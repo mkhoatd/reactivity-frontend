@@ -8,7 +8,7 @@ type Props = {
   openForm: (id: string) => void
 }
 
-const ActivityDetail = ({activity, cancelSelectActivity, openForm}: Props) => {
+const ActivityDetail = ({activity, cancelSelectActivity, openForm }: Props) => {
   const imagePath = `/assets/categoryImages/${activity.category}.jpg`
   return (
     <Card fluid>
